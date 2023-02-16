@@ -67,7 +67,7 @@ void Enemy::Update()
     }
 
     //D押したら右
-    if (Input::IsKey(DIK_RIGHT))
+    if (Input::IsKey(DIK_A))
     {
         if (transform_.position_.x < MAX_X)
         {
@@ -84,7 +84,7 @@ void Enemy::Update()
         }
     }
     //A押したら
-    if (Input::IsKey(DIK_LEFT))
+    if (Input::IsKey(DIK_D))
     {
         if (transform_.position_.x > -MAX_X)
         {
@@ -100,7 +100,7 @@ void Enemy::Update()
         }
     }
 
-    if (Input::IsKeyDown(DIK_RETURN))
+    if (Input::IsKeyDown(DIK_SPACE))
     {
         Ball* pBall = Instantiate<Ball>(GetParent());
         pBall->SetBulletType(1);//0はプレイヤー、1は敵
